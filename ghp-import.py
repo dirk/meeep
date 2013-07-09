@@ -1,4 +1,6 @@
 #! /usr/bin/env python
+# 
+# https://github.com/davisp/ghp-import/blob/master/ghp-import
 #
 # This file is part of the ghp-import package released under
 # the Tumbolia Public License. See the LICENSE file for more

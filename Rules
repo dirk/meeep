@@ -13,6 +13,13 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+preprocess do
+  err = system("mkdir -p #{site.config[:output_dir]}")
+  raise err unless err
+  err = system("touch #{site.config[:output_dir]}/.nojekyll")
+  raise err unless err
+end
+
 compile '/stylesheet/' do
   # don’t filter or layout
 end
@@ -24,7 +31,6 @@ compile '/assets/*' do
   # passs
 end
 route '/assets/*' do
-  puts item.identifier.inspect
   item.identifier[("/assets".length)..-2]
 end
 
@@ -37,6 +43,9 @@ compile '*' do
   end
 end
 
+route '/CNAME/' do
+  '/CNAME'
+end
 
 route '*' do
   if item.binary?
@@ -49,3 +58,4 @@ route '*' do
 end
 
 layout '*', :erb
+
