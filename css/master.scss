@@ -1,0 +1,88 @@
+$lightest: #f8f8f8;
+$lighter: #ababab;
+$middle: #888889;
+$dark:     #5b5b5d;
+$darker:   #353535;
+$darkest:  #171717;
+
+
+$content-width: 480px;
+$content-padding-top: 40px;
+
+$video-image-width:   100px;
+$video-content-width: 356px;
+
+$meta: "ff-meta-web-pro", "Lucida Grande", sans-serif;
+$meta-serif: "ff-meta-serif-web-pro", Georgia, serif;
+$clarendon: "superclarendon", Georgia, serif;
+
+
+@mixin clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix:after {
+  @include clearfix;
+}
+
+body {
+  background: $lightest;
+  font: 12px/16px $meta normal normal;
+}
+p {margin: 0 0 1em 0;}
+
+h1, h2, h3, h4, h5, h6 {margin: 0;}
+a {color: inherit;}
+a img {border: none;}
+ul {margin: 0; padding: 0; list-style: none;}
+
+.container {width: 640px; margin: 0 auto;}
+
+header {background: $darkest; height: 64px;}
+header h1 {margin: 0; padding: 30px 0 0 0; display: block; float: left;}
+header h1 a {
+  text-indent: -9999px;
+  display: inline-block;
+  width: 90px; height: 26px;
+  background: url('/images/logo.png') no-repeat top left;
+}
+
+#main {margin-bottom: 80px; @include clearfix;}
+
+#main nav.sidebar {
+  width: 119px;
+  padding: $content-padding-top 0 $content-padding-top 20px; margin: 0 0 0 20px;
+  border-left: 1px solid #dadada;
+  float: left;
+  color: $middle;
+  h4, h5 {font-family: $clarendon; text-transform: uppercase; font-size: 10px;}
+  h4 {margin-bottom: 8px; font-weight: normal;}
+  h5 {font-weight: 300; margin-bottom: 2px;}
+  
+  a.selected {font-weight: bold; color: $dark;}
+}
+#main section.videos {float: left;}
+
+section.videos {
+  padding-top: $content-padding-top;
+  width: $content-width;
+  article {@include clearfix;}
+  aside.image {
+    display: block; float: left; margin: 0 20px 0 0; padding: 0;
+    // background: #ccc;
+    width: $video-image-width + 4px; overflow: hidden;
+    img {
+      padding: 1px; background: $lightest; border: 1px solid $lighter;
+    }
+  }
+  .content {
+    display: block; float: left; color: $dark;
+    width: $video-content-width;
+    h1 {font-size: 24px; line-height: 32px; color: $darker; margin: -2px 0 0.2em 0;}
+    h1 a {text-decoration: none; &:hover {text-decoration: underline;}}
+    footer {color: $middle; font-size: 10px; text-transform: uppercase; margin: 0 0 1em 0;}
+    
+    p {font-family: $meta-serif;}
+  }
+}

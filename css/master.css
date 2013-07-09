@@ -1,0 +1,116 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+body {
+  background: #f8f8f8;
+  font: 12px/16px "ff-meta-web-pro", "Lucida Grande", sans-serif normal normal; }
+
+p {
+  margin: 0 0 1em 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+a {
+  color: inherit; }
+
+a img {
+  border: none; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.container {
+  width: 640px;
+  margin: 0 auto; }
+
+header {
+  background: #171717;
+  height: 64px; }
+
+header h1 {
+  margin: 0;
+  padding: 30px 0 0 0;
+  display: block;
+  float: left; }
+
+header h1 a {
+  text-indent: -9999px;
+  display: inline-block;
+  width: 90px;
+  height: 26px;
+  background: url("/images/logo.png") no-repeat top left; }
+
+#main {
+  margin-bottom: 80px;
+  content: "";
+  display: table;
+  clear: both; }
+
+#main nav.sidebar {
+  width: 119px;
+  padding: 40px 0 40px 20px;
+  margin: 0 0 0 20px;
+  border-left: 1px solid #dadada;
+  float: left;
+  color: #888889; }
+  #main nav.sidebar h4, #main nav.sidebar h5 {
+    font-family: "superclarendon", Georgia, serif;
+    text-transform: uppercase;
+    font-size: 10px; }
+  #main nav.sidebar h4 {
+    margin-bottom: 8px;
+    font-weight: normal; }
+  #main nav.sidebar h5 {
+    font-weight: 300;
+    margin-bottom: 2px; }
+  #main nav.sidebar a.selected {
+    font-weight: bold;
+    color: #5b5b5d; }
+
+#main section.videos {
+  float: left; }
+
+section.videos {
+  padding-top: 40px;
+  width: 480px; }
+  section.videos article {
+    content: "";
+    display: table;
+    clear: both; }
+  section.videos aside.image {
+    display: block;
+    float: left;
+    margin: 0 20px 0 0;
+    padding: 0;
+    width: 104px;
+    overflow: hidden; }
+    section.videos aside.image img {
+      padding: 1px;
+      background: #f8f8f8;
+      border: 1px solid #ababab; }
+  section.videos .content {
+    display: block;
+    float: left;
+    color: #5b5b5d;
+    width: 356px; }
+    section.videos .content h1 {
+      font-size: 24px;
+      line-height: 32px;
+      color: #353535;
+      margin: -2px 0 0.2em 0; }
+    section.videos .content h1 a {
+      text-decoration: none; }
+      section.videos .content h1 a:hover {
+        text-decoration: underline; }
+    section.videos .content footer {
+      color: #888889;
+      font-size: 10px;
+      text-transform: uppercase;
+      margin: 0 0 1em 0; }
+    section.videos .content p {
+      font-family: "ff-meta-serif-web-pro", Georgia, serif; }
