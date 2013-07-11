@@ -81,7 +81,8 @@ section.videos {
   section.videos article {
     content: "";
     display: table;
-    clear: both; }
+    clear: both;
+    margin: 0 0 20px 0; }
   section.videos aside.image {
     display: block;
     float: left;
