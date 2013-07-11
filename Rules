@@ -18,6 +18,16 @@ preprocess do
   raise err unless err
   err = system("touch #{site.config[:output_dir]}/.nojekyll")
   raise err unless err
+  
+  @items.each do |i|
+    unless i[:date].nil?
+      i[:date_ruby] = Date.parse(i[:date])
+    end
+  end
+  
+  @items['/'][:episodes] = @items.select {|i|
+    i.identifier.start_with? '/gameplay/'
+  }.sort_by! {|i| i[:date_ruby] }.reverse!
 end
 
 compile '/stylesheet/' do
@@ -28,10 +38,15 @@ route '/stylesheet/' do
 end
 
 compile '/assets/*' do
-  # passs
+  # pass
 end
 route '/assets/*' do
   item.identifier[("/assets".length)..-2]
+end
+
+compile '/' do
+  filter :erb
+  layout 'default'
 end
 
 compile '*' do
@@ -57,5 +72,6 @@ route '*' do
   end
 end
 
-layout '*', :erb
+# layout '*', :erb
+layout '/default/', :erb
 

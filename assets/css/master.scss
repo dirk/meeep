@@ -67,7 +67,7 @@ header h1 a {
 section.videos {
   padding-top: $content-padding-top;
   width: $content-width;
-  article {@include clearfix;}
+  article {@include clearfix; margin: 0 0 20px 0;}
   aside.image {
     display: block; float: left; margin: 0 20px 0 0; padding: 0;
     // background: #ccc;
