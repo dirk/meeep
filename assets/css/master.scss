@@ -79,7 +79,7 @@ section.videos {
   .content {
     display: block; float: left; color: $dark;
     width: $video-content-width;
-    h1 {font-size: 24px; line-height: 32px; color: $darker; margin: -2px 0 0.2em 0;}
+    h1 {font-size: 21px; line-height: 32px; color: $darker; margin: -4px 0 0.2em 0;}
     h1 a {text-decoration: none; &:hover {text-decoration: underline;}}
     footer {color: $middle; font-size: 10px; text-transform: uppercase; margin: 0 0 1em 0;}
     
