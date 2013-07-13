@@ -100,10 +100,10 @@ section.videos {
     color: #5b5b5d;
     width: 356px; }
     section.videos .content h1 {
-      font-size: 24px;
+      font-size: 21px;
       line-height: 32px;
       color: #353535;
-      margin: -2px 0 0.2em 0; }
+      margin: -4px 0 0.2em 0; }
     section.videos .content h1 a {
       text-decoration: none; }
       section.videos .content h1 a:hover {
